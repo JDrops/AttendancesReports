@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATTAPP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="first-page">
+        <div class="container">
+            <img src="img/logo.png" alt="Logo App">
+            <br>
+            <label for="file-upload">Upload Data File:
+                <input type="file" id="file-upload" accept=".csv">
+            </label>
+            <p></p>
+            <button id="upload-button" disabled>Upload</button>
+        </div>
+    </div>
+
+    <div id="loading" class="loader" style="display: none;"></div>
+
+    <div id="second-page" style="display: none;">
+        <div class="header-container">
+            <img src="img/Logo.bmp" alt="Logo KA" width="125" class="logo">
+            <hgroup class="header-content">
+                <h1>ABSENSI KARYAWAN CV. KASIH ABADI</h1>
+                <h2 id="periode"></h2>
+                <!-- <label for="department-selector">Select Department:</label> -->
+                <select id="department-selector" style="zoom:2">
+                    <!-- <option value="">-- Select Department --</option> -->
+                </select>
+            </hgroup>
+            <button id="close">Close</button>
+        </div>
+        <!-- <hr style="margin-bottom: 0;"> -->
+        <!-- <div id="color-counts"></div> -->
+        <table id="attendance-table">
+            <thead>
+                <tr>
+                    <th>NAMA</th>
+                    <!-- Date headers will be dynamically added here -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Attendance rows will be dynamically added here -->
+            </tbody>
+        </table>
+        <hr>
+        <table id="color-counts-table">
+            <thead>
+                <tr>
+                    <th class="header">DEPARTEMEN</th>
+                    <th class="header">NAMA</th>
+                    <th class="no-data">TIDAK HADIR</th>
+                    <th class="partial-data">TIDAK SCAN</th>
+                    <th class="on-time-late">TERLAMBAT I</th>
+                    <th class="very-late">TERLAMBAT II</th>
+                    <th class="header">HARI KERJA</th>
+                    <th class="header">POTONGAN</th>
+                    <th class="header">TOTAL</th>
+                    <th class="header">KET</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
